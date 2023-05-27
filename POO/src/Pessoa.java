@@ -48,6 +48,4 @@ public class Pessoa {
         this.CPF = CPF;
     }
 
-
-
 }
