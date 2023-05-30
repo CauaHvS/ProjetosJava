@@ -70,4 +70,36 @@ public class Aluno extends Pessoa{
         this.disciplinasCursando = disciplinasCursando;
         this.disciplinasACursar = disciplinasACursar;
     }
+
+    public void adicionarDisciplinaCursando(Disciplina disciplina) {
+        disciplinasCursando.add(disciplina);
+    }
+
+    public void removerDisciplinaCursando(Disciplina disciplina) {
+        disciplinasCursando.remove(disciplina);
+    }
+
+    public void adicionarDisciplinaACursar(Disciplina disciplina) {
+        disciplinasACursar.add(disciplina);
+    }
+
+    public void removerDisciplinaACursar(Disciplina disciplina) {
+        disciplinasACursar.remove(disciplina);
+    }
+
+    public void imprimirDisciplinasCursando() {
+        System.out.println("Disciplinas cursando:");
+        for (Disciplina disciplina : disciplinasCursando) {
+            System.out.println("Código: " + disciplina.getCodigo());
+            System.out.println("Nome: " + disciplina.getNome());
+        }
+    }
+
+    public void imprimirDisciplinasACursar() {
+        System.out.println("Disciplinas a cursar:");
+        for (Disciplina disciplina : disciplinasACursar) {
+            System.out.println("Código: " + disciplina.getCodigo());
+            System.out.println("Nome: " + disciplina.getNome());
+        }
+    }
 }

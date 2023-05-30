@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Disciplina {
     private int codigo;
     private String nome;
@@ -5,6 +7,8 @@ public class Disciplina {
     private int ano;
     private double cargaHoraria;
     private int creditos;
+
+    private ArrayList<Aluno> alunos;
 
     public int getCodigo() {
         return codigo;
@@ -65,5 +69,22 @@ public class Disciplina {
         this.ano = ano;
         this.cargaHoraria = cargaHoraria;
         this.creditos = creditos;
+    }
+
+    public void adicionarAluno(Aluno aluno) {
+        alunos.add(aluno);
+    }
+
+    public void removerAluno(Aluno aluno) {
+        alunos.remove(aluno);
+    }
+
+    public void imprimirAlunosMatriculados() {
+        System.out.println("Alunos matriculados na disciplina:");
+        for (Aluno aluno : alunos) {
+            System.out.println("Nome: " + aluno.getNome());
+            System.out.println("Matricula: " + aluno.getMatricula());
+            // Imprimir outros detalhes do aluno, se necessário
+        }
     }
 }

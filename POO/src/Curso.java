@@ -36,4 +36,11 @@ public class Curso {
         this.nome = nome;
         this.duração = duração;
     }
+
+    public void imprimirInformacoes() {
+        System.out.println("Informaçãoes do curso:");
+        System.out.println("Código: " + getCodigo());
+        System.out.println("Nome: " + getNome());
+        System.out.println("Duração: " + getDuração() + " semestres");
+    }
 }

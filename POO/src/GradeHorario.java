@@ -7,6 +7,8 @@ public class GradeHorario {
     private String turno;
     private ArrayList<HorarioAula> horarioAulas;
 
+    private ArrayList<Aluno> alunos;
+
     public String getCurso() {
         return curso;
     }
@@ -58,4 +60,16 @@ public class GradeHorario {
         this.turno = turno;
         this.horarioAulas = horarioAulas;
     }
+    public void exibirQuadroHorarios() {
+        System.out.println("Quadro de Horários:");
+
+        if (alunos != null && !alunos.isEmpty()) {
+            for (Aluno aluno : alunos) {
+                aluno.getDisciplinasCursando();
+                System.out.println("--------------------------");
+            }
+        } else {
+            System.out.println("Nenhum aluno cadastrado na grade de horários.");
+        }
+}
 }
